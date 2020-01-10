@@ -15,6 +15,29 @@ namespace HubstaffCloneNew
         public addNote()
         {
             InitializeComponent();
+            btnAddNote.Enabled = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddNote_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello i am Clicked");
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNote.Text == "")
+            {
+                btnAddNote.Enabled = false;
+            }
+            else
+            {
+                btnAddNote.Enabled = true;
+            }
         }
     }
 }
