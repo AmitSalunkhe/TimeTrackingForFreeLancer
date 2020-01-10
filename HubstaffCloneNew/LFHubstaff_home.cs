@@ -51,6 +51,7 @@ namespace HubstaffCloneNew
             if(btnAddNote.Enabled)
             {
                 addNote an = new addNote();
+                an.Show();
             }
             else
             {
@@ -64,14 +65,14 @@ namespace HubstaffCloneNew
             {
                 MessageBox.Show("Timer Stopped");
                 btnPlayStop.Image = Image.FromFile("../Images/play-50.png");
-                btnAddNote.Enabled = false;
+              //  btnAddNote.Enabled = false;
                 timer = false;
             }
             else
             {
                 MessageBox.Show("Timer Started");
                 btnPlayStop.Image = Image.FromFile("../Images/stop-50.png");
-                btnAddNote.Enabled = true;
+               // btnAddNote.Enabled = true;
                 timer = true;
             }
         }
